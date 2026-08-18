@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <title>Jadoo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    maxWidth: {
+                        container: '1440px',
+                    },
+                    colors: {
+                        primary: '#212832',
+                        secondary: '#5E6282',
+                        tertiary: '#DF6951',
+                        heading: '#14183E',
+                        subheading: '#5E6282',
+                        head: '#1E1D4C',
+                    },
+                    fontFamily: {
+                        sans: ['Google Sans', 'sans-serif'],
+                        poppins: ['Poppins', 'sans-serif'],
+                        volkhov: ['Volkhov', 'serif'],
+                        open: ['Open Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="wrap bg-[url('./image/decore-1.png')] bg-no-repeat bg-right-top">
+
+        <!-- NAVBAR -->
+
+        <nav>
+            <div class="container mx-auto flex justify-between items-center py-[48px]">
+                <a class="navbar-brand" href="#">
+                    <img src="./image/logo.png" alt="">
+                </a>
+
+                <div>
+                    <ul class="navbar-nav flex gap-[50px]">
+                        <li class="nav-item">
+                            <a class="nav-link font-sans font-medium text-primary transition-colors ease-in-out duration-300 hover:text-tertiary"
+                                href="#">Destinations</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link font-sans font-medium text-primary transition-colors ease-in-out duration-300 hover:text-tertiary"
+                                href="#">Hotels</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link font-sans font-medium text-primary transition-colors ease-in-out duration-300 hover:text-tertiary"
+                                href="#">Flights</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link font-sans font-medium text-primary transition-colors ease-in-out duration-300 hover:text-tertiary"
+                                href="#">Bookings</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <ul class="navbar-nav flex gap-[50px]">
+                        <li class="nav-item">
+                            <a class="nav-link font-sans font-medium text-primary transition-colors ease-in-out duration-300 hover:text-tertiary"
+                                href="#">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link font-sans font-medium text-primary py-2 px-5 rounded-md bg-white border-2 border-primary transition-colors ease-in-out duration-300 hover:text-white hover:bg-tertiary hover:border-transparent"
+                                href="#">Sign up</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link font-sans font-medium text-primary" href="#">EN</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+        <!-- BANNER SECTION -->
+
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="banner-content w-1/2">
+                <h5 class="font-poppins font-bold text-xl text-tertiary uppercase">Best Destinations around the world
+                </h5>
+                <h1 class="font-volkhov font-bold text-[84px] text-primary leading-[89px] tracking-[-3px] my-6">Travel,
+                    enjoy<br>and live a new<br>and full life</h1>
+                <p class="font-poppins font-medium text-base text-secondary leading-[30px] mb-8">Built Wicket longer
+                    admire do barton vanity itself do in it. Preferred to sportsmen it engrossed listening. Park gate
+                    sell they west hard for the.</p>
+
+                <div>
+                    <button
+                        class="font-sans font-medium text-lg text-white py-4 px-7 rounded-lg bg-[#F1A501] transition-shadow ease-in-out duration-300 hover:shadow-xl hover:shadow-[#F1A501]/30 mr-6">Find
+                        Out More</button>
+                    <button class="text-lg text-white py-3 px-4 rounded-full bg-tertiary 
+                        transition-shadow ease-in-out duration-300 hover:shadow-xl hover:shadow-tertiary/30 mr-2"><i
+                            class="fa-solid fa-play"></i></button>
+                    <button class="font-sans font-medium text-lg text-secondary">Play
+                        Demo</button>
+                </div>
+            </div>
+            <div class="banner-image w-1/2">
+                <img src="./image/banner.png" alt="banner-image">
+            </div>
+        </div>
+    </div>
+
+    <!-- SERVICES -->
+
+    <section class="services-section">
+        <div class="container mx-auto text-center">
+            <div class="common-tag mt-[105px]">
+                <h3 class="font-poppins font-semibold text-xl text-subheading uppercase">Category</h3>
+                <h2 class="font-volkhov font-bold text-5xl text-heading mt-3">We Offer Best Services</h2>
+            </div>
+
+            <div class="flex justify-between gap-10 my-8">
+                <div class="step-1 w-1/4 bg-white rounded-3xl py-7 
+                transition-all ease-in-out duration-300 hover:shadow-2xl ">
+                    <img class="justify-self-center" src="./image/service-1.png" alt="service-1">
+                    <div>
+                        <h4 class="font-open font-semibold text-xl text-head mt-[29px] mb-[15px]">Calculated Weather
+                        </h4>
+                        <h5 class="font-poppins font-medium text-base text-subheading">Built Wicket longer<br>admire do
+                            barton<br>vanity itself do in it.</h5>
+                    </div>
+                </div>
+                <div class="step-2 w-1/4 bg-white rounded-3xl py-7 
+                transition-all ease-in-out duration-300 hover:shadow-2xl">
+                    <img class="justify-self-center" src="./image/service-2.png" alt="service-1">
+                    <div>
+                        <h4 class="font-open font-semibold text-xl text-head mt-[29px] mb-[15px]">Calculated Weather
+                        </h4>
+                        <h5 class="font-poppins font-medium text-base text-subheading">Built Wicket longer<br>admire do
+                            barton<br>vanity itself do in it.</h5>
+                    </div>
+                </div>
+                <div class="step-3 w-1/4 bg-white rounded-3xl py-7
+                transition-all ease-in-out duration-300 hover:shadow-2xl">
+                    <img class="justify-self-center" src="./image/service-3.png" alt="service-1">
+                    <div>
+                        <h4 class="font-open font-semibold text-xl text-head mt-[29px] mb-[15px]">Calculated Weather
+                        </h4>
+                        <h5 class="font-poppins font-medium text-base text-subheading">Built Wicket longer<br>admire do
+                            barton<br>vanity itself do in it.</h5>
+                    </div>
+                </div>
+                <div class="step-4 w-1/4 bg-white rounded-3xl py-7 
+                transition-all ease-in-out duration-300 hover:shadow-2xl">
+                    <img class="justify-self-center" src="./image/service-4.png" alt="service-1">
+                    <div>
+                        <h4 class="font-open font-semibold text-xl text-head mt-[29px] mb-[15px]">Calculated Weather
+                        </h4>
+                        <h5 class="font-poppins font-medium text-base text-subheading">Built Wicket longer<br>admire do
+                            barton<br>vanity itself do in it.</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
