@@ -15,10 +15,23 @@
     <script>
         tailwind.config = {
             theme: {
-                extend: {
-                    maxWidth: {
-                        container: '1440px',
+                container: {
+                    center: true,
+                    padding: {
+                        DEFAULT: '20px',
+                        sm: '20px',
+                        lg: '30px',
                     },
+                    screens: {
+                        sm: '540px',
+                        md: '720px',
+                        lg: '960px',
+                        xl: '1140px',
+                        '2xl': '1320px',
+                    },
+                },
+
+                extend: {
                     colors: {
                         primary: '#212832',
                         secondary: '#5E6282',
@@ -26,9 +39,10 @@
                         heading: '#14183E',
                         subheading: '#5E6282',
                         head: '#1E1D4C',
+                        yellow: '#F1A501',
                     },
                     fontFamily: {
-                        sans: ['Google Sans', 'sans-serif'],
+                        google: ['Google Sans', 'sans-serif'],
                         poppins: ['Poppins', 'sans-serif'],
                         volkhov: ['Volkhov', 'serif'],
                         open: ['Open Sans', 'sans-serif']
@@ -46,27 +60,27 @@
         <!-- NAVBAR -->
 
         <nav>
-            <div class="container mx-auto flex justify-between items-center py-[48px]">
+            <div class="container flex justify-between items-center py-12">
                 <a class="navbar-brand" href="#">
                     <img src="./image/logo.png" alt="">
                 </a>
 
                 <div>
-                    <ul class="navbar-nav flex gap-[50px]">
+                    <ul class="navbar-nav flex gap-12">
                         <li class="nav-item">
-                            <a class="nav-link font-sans font-medium text-primary transition-colors ease-in-out duration-300 hover:text-tertiary"
+                            <a class="nav-link font-google font-medium text-primary transition-colors duration-300 ease-in-out hover:text-tertiary"
                                 href="#">Destinations</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link font-sans font-medium text-primary transition-colors ease-in-out duration-300 hover:text-tertiary"
+                            <a class="nav-link font-google font-medium text-primary transition-colors duration-300 ease-in-out hover:text-tertiary"
                                 href="#">Hotels</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link font-sans font-medium text-primary transition-colors ease-in-out duration-300 hover:text-tertiary"
+                            <a class="nav-link font-google font-medium text-primary transition-colors duration-300 ease-in-out hover:text-tertiary"
                                 href="#">Flights</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link font-sans font-medium text-primary transition-colors ease-in-out duration-300 hover:text-tertiary"
+                            <a class="nav-link font-google font-medium text-primary transition-colors duration-300 ease-in-out hover:text-tertiary"
                                 href="#">Bookings</a>
                         </li>
                     </ul>
@@ -75,15 +89,15 @@
                 <div>
                     <ul class="navbar-nav flex gap-[50px]">
                         <li class="nav-item">
-                            <a class="nav-link font-sans font-medium text-primary transition-colors ease-in-out duration-300 hover:text-tertiary"
+                            <a class="nav-link font-google font-medium text-primary transition-colors duration-300 ease-in-out hover:text-tertiary"
                                 href="#">Login</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link font-sans font-medium text-primary py-2 px-5 rounded-md bg-white border-2 border-primary transition-colors ease-in-out duration-300 hover:text-white hover:bg-tertiary hover:border-transparent"
+                            <a class="nav-link font-google font-medium text-primary py-2 px-5 rounded-md bg-white border-2 border-primary transition-colors duration-300 ease-in-out hover:text-white hover:bg-tertiary hover:border-tertiary"
                                 href="#">Sign up</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link font-sans font-medium text-primary" href="#">EN</a>
+                            <a class="nav-link font-google font-medium text-primary" href="#">EN</a>
                         </li>
                     </ul>
                 </div>
@@ -93,156 +107,174 @@
 
         <!-- BANNER SECTION -->
 
-        <div class="container mx-auto flex justify-between items-center">
-            <div class="banner-content w-1/2">
+        <div class="container flex flex-col lg:flex-row justify-between items-center">
+            <div class="banner-content w-full lg:w-1/2">
                 <h5 class="font-poppins font-bold text-xl text-tertiary uppercase">Best Destinations around the world
                 </h5>
-                <h1 class="font-volkhov font-bold text-[84px] text-primary leading-[89px] tracking-[-3px] my-6">Travel,
+                <h1 class="font-volkhov font-bold
+                text-5xl leading-tight md:text-6xl 
+                lg:text-[84px] lg:leading-[89px] lg:tracking-[-3px] 
+                mt-6 mb-6">Travel,
                     enjoy<br>and live a new<br>and full life</h1>
                 <p class="font-poppins font-medium text-base text-secondary leading-[30px] mb-8">Built Wicket longer
                     admire do barton vanity itself do in it. Preferred to sportsmen it engrossed listening. Park gate
                     sell they west hard for the.</p>
 
-                <div>
+                <div class="flex flex-wrap items-center gap-4">
                     <button
-                        class="font-sans font-medium text-lg text-white py-4 px-7 rounded-lg bg-[#F1A501] transition-shadow ease-in-out duration-300 hover:shadow-xl hover:shadow-[#F1A501]/30 mr-6">Find
+                        class="font-google font-medium text-lg text-white py-4 px-7 rounded-lg bg-yellow transition-shadow duration-300 ease-in-out hover:shadow-xl hover:shadow-yellow/30">Find
                         Out More</button>
                     <button class="text-lg text-white py-3 px-4 rounded-full bg-tertiary 
-                        transition-shadow ease-in-out duration-300 hover:shadow-xl hover:shadow-tertiary/30 mr-2"><i
+                        transition-shadow duration-300 ease-in-out hover:shadow-xl hover:shadow-tertiary/30"><i
                             class="fa-solid fa-play"></i></button>
-                    <button class="font-sans font-medium text-lg text-secondary">Play
+                    <button class="font-google font-medium text-lg text-secondary">Play
                         Demo</button>
                 </div>
             </div>
-            <div class="banner-image w-1/2">
-                <img src="./image/banner.png" alt="banner-image">
+            <div class="banner-image w-full lg:w-1/2">
+                <img class="w-full max-w-full" src="./image/banner.png" alt="Traveler with luggage">
             </div>
         </div>
     </div>
 
     <!-- SERVICES -->
 
-    <section class="services-section bg-[url('./image/decore-2.png')] bg-no-repeat bg-right-top">
-        <div class="container mx-auto text-center">
-            <div class="common-tag mt-[105px]">
-                <h3 class="font-poppins font-semibold text-xl text-subheading uppercase">Category</h3>
-                <h2 class="font-volkhov font-bold text-5xl text-heading mt-3">We Offer Best Services</h2>
-            </div>
+    <section class=" services-section">
+                <div class="container text-center bg-[url('./image/decore-2.png')] bg-no-repeat bg-right-top">
+                    <div class="common-tag mt-[105px]">
+                        <h3 class="font-poppins font-semibold text-xl text-subheading uppercase">Category</h3>
+                        <h2 class="font-volkhov font-bold text-5xl text-heading mt-3">We Offer Best Services</h2>
+                    </div>
 
-            <div class="flex justify-between gap-10 my-8">
-                <div class="step-1 w-1/4 bg-white rounded-3xl py-7 
-                transition-all ease-in-out duration-300 hover:shadow-2xl ">
-                    <img class="justify-self-center" src="./image/service-1.png" alt="service-1">
-                    <div>
-                        <h4 class="font-open font-semibold text-xl text-head mt-[29px] mb-[15px]">Calculated Weather
-                        </h4>
-                        <h5 class="font-poppins font-medium text-base text-subheading">Built Wicket longer<br>admire do
-                            barton<br>vanity itself do in it.</h5>
+                    <div class="flex justify-between gap-10 my-8">
+                        <div class="step-1 w-1/4 bg-white rounded-3xl py-7 
+                transition-all duration-300 ease-in-out hover:shadow-2xl ">
+                            <img class="justify-self-center" src="./image/service-1.png" alt="service-1">
+                            <div>
+                                <h4 class="font-open font-semibold text-xl text-head mt-[29px] mb-[15px]">Calculated
+                                    Weather
+                                </h4>
+                                <h5 class="font-poppins font-medium text-base text-subheading">Built Wicket
+                                    longer<br>admire do
+                                    barton<br>vanity itself do in it.</h5>
+                            </div>
+                        </div>
+                        <div class="step-2 w-1/4 bg-white rounded-3xl py-7 
+                transition-all duration-300 ease-in-out hover:shadow-2xl">
+                            <img class="justify-self-center" src="./image/service-2.png" alt="service-1">
+                            <div>
+                                <h4 class="font-open font-semibold text-xl text-head mt-[29px] mb-[15px]">Best Flights
+                                </h4>
+                                <h5 class="font-poppins font-medium text-base text-subheading">Engrossed listening.<br>
+                                    Park
+                                    gate sell they<br>west hard for the.</h5>
+                            </div>
+                        </div>
+                        <div class="step-3 w-1/4 bg-white rounded-3xl py-7
+                transition-all duration-300 ease-in-out hover:shadow-2xl">
+                            <img class="justify-self-center" src="./image/service-3.png" alt="service-1">
+                            <div>
+                                <h4 class="font-open font-semibold text-xl text-head mt-[29px] mb-[15px]">Local Events
+                                </h4>
+                                <h5 class="font-poppins font-medium text-base text-subheading">Barton vanity itself
+                                    do<br>in it.
+                                    Preferd to men it<br>engrossed listening. </h5>
+                            </div>
+                        </div>
+                        <div class="step-4 w-1/4 bg-white rounded-3xl py-7 
+                transition-all duration-300 ease-in-out hover:shadow-2xl">
+                            <img class="justify-self-center" src="./image/service-4.png" alt="service-1">
+                            <div>
+                                <h4 class="font-open font-semibold text-xl text-head mt-[29px] mb-[15px]">Customization
+                                </h4>
+                                <h5 class="font-poppins font-medium text-base text-subheading">We deliver outsourced
+                                    <br>aviation services for<br>military customers
+                                </h5>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="step-2 w-1/4 bg-white rounded-3xl py-7 
-                transition-all ease-in-out duration-300 hover:shadow-2xl">
-                    <img class="justify-self-center" src="./image/service-2.png" alt="service-1">
-                    <div>
-                        <h4 class="font-open font-semibold text-xl text-head mt-[29px] mb-[15px]">Best Flights
-                        </h4>
-                        <h5 class="font-poppins font-medium text-base text-subheading">Engrossed listening.<br> Park
-                            gate sell they<br>west hard for the.</h5>
-                    </div>
-                </div>
-                <div class="step-3 w-1/4 bg-white rounded-3xl py-7
-                transition-all ease-in-out duration-300 hover:shadow-2xl">
-                    <img class="justify-self-center" src="./image/service-3.png" alt="service-1">
-                    <div>
-                        <h4 class="font-open font-semibold text-xl text-head mt-[29px] mb-[15px]">Local Events
-                        </h4>
-                        <h5 class="font-poppins font-medium text-base text-subheading">Barton vanity itself do<br>in it.
-                            Preferd to men it<br>engrossed listening. </h5>
-                    </div>
-                </div>
-                <div class="step-4 w-1/4 bg-white rounded-3xl py-7 
-                transition-all ease-in-out duration-300 hover:shadow-2xl">
-                    <img class="justify-self-center" src="./image/service-4.png" alt="service-1">
-                    <div>
-                        <h4 class="font-open font-semibold text-xl text-head mt-[29px] mb-[15px]">Customization
-                        </h4>
-                        <h5 class="font-poppins font-medium text-base text-subheading">We deliver outsourced
-                            <br>aviation services for<br>military customers
-                        </h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                </section>
 
-    <!-- BOOKING SECTION -->
+                <!-- BOOKING SECTION -->
 
-    <section class="booking-section">
-        <div class="container flex justify-between mx-auto items-center">
-            <div class="booking-content w-1/2">
-                <div class="common-tag">
-                    <h3 class="font-poppins font-semibold text-xl text-subheading uppercase">Easy and Fast</h3>
-                    <h2 class="font-volkhov font-bold text-5xl text-heading capitalize mt-3">Book your next trip <br> In
-                        3 easy steps
-                    </h2>
-                </div>
-                <div class="steps my-8">
-                    <div class="step-1 flex gap-7 items-center">
-                        <div class="image">
-                            <img src="./image/step-1.png" alt="">
+                <section class="booking-section">
+                    <div class="container flex justify-between items-center">
+                        <div class="booking-content w-1/2">
+                            <div class="common-tag">
+                                <h3 class="font-poppins font-semibold text-xl text-subheading uppercase">Easy and Fast
+                                </h3>
+                                <h2 class="font-volkhov font-bold text-5xl text-heading capitalize mt-3">Book your next
+                                    trip <br> In
+                                    3 easy steps
+                                </h2>
+                            </div>
+                            <div class="steps my-8">
+                                <div class="step-1 flex gap-7 items-center">
+                                    <div class="image">
+                                        <img src="./image/step-1.png" alt="">
+                                    </div>
+                                    <div class="content">
+                                        <h5 class="font-poppins font-bold text-base text-subheading">Choose Destination
+                                        </h5>
+                                        <p class="font-poppins font-normal text-base text-subheading ">Lorem ipsum dolor
+                                            sit amet,
+                                            consectetur<br>adipiscing elit. Urna, tortor tempus.</p>
+                                    </div>
+                                </div>
+                                <div class="step-2 flex gap-7 items-center my-8">
+                                    <div class="image">
+                                        <img src="./image/step-2.png" alt="">
+                                    </div>
+                                    <div class="content">
+                                        <h5 class="font-poppins font-bold text-base text-subheading">Make Payment</h5>
+                                        <p class="font-poppins font-normal text-base text-subheading ">Lorem ipsum dolor
+                                            sit amet,
+                                            consectetur<br>adipiscing elit. Urna, tortor tempus.</p>
+                                    </div>
+                                </div>
+                                <div class="step-3 flex gap-7 items-center">
+                                    <div class="image">
+                                        <img src="./image/step-3.png" alt="">
+                                    </div>
+                                    <div class="content">
+                                        <h5 class="font-poppins font-bold text-base text-subheading">Reach Airport on
+                                            Selected Date
+                                        </h5>
+                                        <p class="font-poppins font-normal text-base text-subheading ">Lorem ipsum dolor
+                                            sit amet,
+                                            consectetur<br>adipiscing elit. Urna, tortor tempus.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="content">
-                            <h5 class="font-poppins font-bold text-base text-subheading">Choose Destination</h5>
-                            <p class="font-poppins font-normal text-base text-subheading ">Lorem ipsum dolor sit amet, consectetur<br>adipiscing elit. Urna, tortor tempus.</p>
+                        <div class="booking-image w-1/2">
+                            <img src="./image/booking.png" alt="">
                         </div>
                     </div>
-                    <div class="step-2 flex gap-7 items-center my-8">
-                        <div class="image">
-                            <img src="./image/step-2.png" alt="">
+                </section>
+
+                <!-- LOGOS -->
+
+                <section class="logos-section">
+                    <div class="container flex items-center gap-20 justify-between mt-6 mb-6">
+                        <div>
+                            <img class="grayscale" src="./image/logo-1.png" alt="">
                         </div>
-                        <div class="content">
-                            <h5 class="font-poppins font-bold text-base text-subheading">Make Payment</h5>
-                            <p class="font-poppins font-normal text-base text-subheading ">Lorem ipsum dolor sit amet, consectetur<br>adipiscing elit. Urna, tortor tempus.</p>
+                        <div>
+                            <img class="grayscale" src="./image/logo-2.png" alt="">
+                        </div>
+                        <div>
+                            <img class="grayscale" src="./image/logo-3.png" alt="">
+                        </div>
+                        <div>
+                            <img class="grayscale" src="./image/logo-4.png" alt="">
+                        </div>
+                        <div>
+                            <img class="grayscale" src="./image/logo-5.png" alt="">
                         </div>
                     </div>
-                    <div class="step-3 flex gap-7 items-center">
-                        <div class="image">
-                            <img src="./image/step-3.png" alt="">
-                        </div>
-                        <div class="content">
-                            <h5 class="font-poppins font-bold text-base text-subheading">Reach Airport on Selected Date</h5>
-                            <p class="font-poppins font-normal text-base text-subheading ">Lorem ipsum dolor sit amet, consectetur<br>adipiscing elit. Urna, tortor tempus.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="booking-image w-1/2">
-                <img src="./image/booking.png" alt="">
-            </div>
-        </div>
-    </section>
-
-    <!-- LOGOS -->
-
-    <section class="logos-section">
-        <div class="container mx-auto flex items-center gap-20 justify-between my-6">
-            <div>
-                <img class="grayscale" src="./image/logo-1.png" alt="">
-            </div>
-            <div>
-                <img class="grayscale" src="./image/logo-2.png" alt="">
-            </div>
-            <div>
-                <img class="grayscale" src="./image/logo-3.png" alt="">
-            </div>
-            <div>
-                <img class="grayscale" src="./image/logo-4.png" alt="">
-            </div>
-            <div>
-                <img class="grayscale" src="./image/logo-5.png" alt="">
-            </div>
-        </div>
-    </section>
+                </section>
 </body>
 
 </html>
